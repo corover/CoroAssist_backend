@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "prj-corover-dev-srv-01-396106",
+  "private_key_id": "cbc7aeacb8ccab2f4ab711c61162692d9eacc98b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCkGBLK8Xgbn+28\n1gylgVrkV1Zr1sGZuFKvFUM++M506IQY82ya8abfdShNNisZRA42ozlxJ+9lxthQ\npxqdnPMUUh1p37NdzvsOwSN1kSwmVdOsOlQM1G4jcdr+puu06enskSKaSdwixGFX\nbj0uOuvmbQjuCXCdpzETBpku8FVtU2y2J+hzceed5Pcftb64E/+BAhiwjcl7h2M2\nBClCQyDyVHmU2ranrw1y/h5aawegdDTTzf+5RuGNFtK+2DC5vsAFSNI3rYNciBQC\no6c3jC9wrm36zgc6jPXvRooqguhwcVELAZxug//y3wniBVypu6ywRluYxk2izzpD\nNmGtQRIZAgMBAAECggEADuvfFM2diPcjZiJMs7J68mKV8DTVSMYmQ3EUIVWWNUx9\nBP8CdDOr/SV181ENED1MN/mvT01wJOAbaxIW7UtVUbBTdMort3vXzOd3jJXiRUYh\n4ZP+pDM48Xr4v/x4i7kgu8Ti0aBy83jKC51xoMX1p4lorRFcrs+1bbASHXheb3qb\nBWHE7WDizi1bYI6Cxv4GaoFOpNmaMAl7Ml4XZvDKkfBc58Jsa+s+4C8Sj3NBsHXa\n4UcE+lpn2jXVhi0h57KlN+iv14A1Jm7ghkxw+v8/HYa/ageLzZhVxJhRO9QWYcyt\n/vr2dOp5TEZzOL5EQ9eokNuUUKWS0Iu/sOYSknS3NQKBgQDY4tHwZWp6C5N7Cxg9\nBk0PNtLF93eMRBiwagtQDcht+nAd3Sem0T4u9bC3jK/p7EOHQ0BjzkRkRtw8MPwJ\n42az5fzq6DLAT/e71ZSrymk+k1N9+FAYl3c9xhoDPZjZjX9gfA7FkfiXztSBTBp9\nDAsv3khxdV+D3StwCAy0jIDELwKBgQDBr/Thc/DBfYUc36Lwc4O+kLuSjQTs+qdF\nlHVzq22v1d9oXhfvY+Ed60RMCTNJmet57JtCLmkWo9RGbf3lP6s7yii7cWWDVT8a\n9nyqgGoiMIAxVOcq7QjGDDMojx/mgu7Ja/LfQIJgZu2PFvLuk99lin76ENTgafzS\nX6/LbuDUNwKBgQCCKEzZOeOWbpAJTXU0Wi2wrbP7/jEOSmeOp3U2i6724U6bfXco\nU3Y/9E4jORjxB0rXR/LCcqz0iNnufW8j+AZQe/s2djbO1q7TWK+qEQTr+romZPic\naXmz5skBnNu344THwGuVAa7wW72IAsX6uVmVVo6fGFND7Vz+FLabO56jHQKBgG/3\nxjqnCaDxbQg6CDm0rY52oNihiR1t8VD598P8cBZcLyBodLHBLZxcK0lBcFK2FjiP\nnVlu9vVNlCN65nGmktinj1B8x1Ba8XYm0/7E6ZYGL7VU/aYFDTNgThq+UpSxUFVE\ngEyrQDN2jRJRE/LzrQtIOwtYu5dX7f23ryqNWI+VAoGAWv3DkNkXRH1mbhI2mTpN\nAnql+IBq5jc5kMfCVYpYnVg4tNklTuscwRKEGMuNlXEDJIcN/1tKLj8bSM8O5Kxe\nKb2ty3Tf+Xf46R9obtwkIyiasXGxVydOctTB/3jhcdd+D7JVILSEG6k8ntz5lcG9\nZhdEJiIAZNhJKf5amhPtDX0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "corover-prod-serviceapi-as1-01@prj-corover-dev-srv-01-396106.iam.gserviceaccount.com",
+  "client_id": "102403437300847814158",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/corover-prod-serviceapi-as1-01%40prj-corover-dev-srv-01-396106.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
