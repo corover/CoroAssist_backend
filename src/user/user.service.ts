@@ -166,16 +166,8 @@ export class UserService {
     });
     miniSearch.addAll(intents);
     let result = miniSearch.search(body.query, { fuzzy: 0.3 })[0];
-    console.log(result,"resulytttt===");
     
-    if (result) {
-      console.log('returningg');
-      console.log({   
-        response: result.answers[body.lang][0].value,
-        audio: result.answers[body.lang][0].audio,
-        answerId: uuidv4(),
-      });
-      
+    if (result) { 
       return {   
         response: result.answers[body.lang][0].value,
         audio: result.answers[body.lang][0].audio,
