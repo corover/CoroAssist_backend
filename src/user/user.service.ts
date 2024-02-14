@@ -169,12 +169,21 @@ export class UserService {
     console.log(result,"resulytttt===");
     
     if (result) {
+      console.log('returningg');
+      console.log({   
+        response: result.answers[body.lang][0].value,
+        audio: result.answers[body.lang][0].audio,
+        answerId: uuidv4(),
+      });
+      
       return {   
         response: result.answers[body.lang][0].value,
         audio: result.answers[body.lang][0].audio,
         answerId: uuidv4(),
       };
     } else {
+      console.log('in fall');
+      
       return translateReply['fallback'][body.lang];
     }
   }

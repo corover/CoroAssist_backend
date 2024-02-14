@@ -28,14 +28,14 @@ export const greetings = [
         {
           value: 'Your schedule for tomorrow is task 1',
           audio:
-            'https://coroverbackendstorage.blob.core.windows.net/chatbot-audio-bucket/47bef65f-97a2-4275-8d9b-3aa4b2ece5db_en.mp3',
+            'https://storage.googleapis.com/ami-tts-storage/8368d185-4f4c-4a90-b68e-ae84ac83bce1.wav',
         },
       ],
       hi: [
         {
           value: 'कल के लिए आपका शेड्यूल कार्य 1 है',
           audio:
-            'https://uiresource.blob.core.windows.net/selfonboard-res/42cb304a-43e9-45a2-9d3b-5d2a82adf373.wav',
+            'https://storage.googleapis.com/ami-tts-storage/ff4380ac-57ff-422b-8889-9bcbec00a62f.wav',
         },
       ],
     },
