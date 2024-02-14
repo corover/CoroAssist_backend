@@ -74,7 +74,7 @@ export class UserService {
           } else {
             textToTranslate = modifiedQuery.replace('translate', '').trim();
           }
-          console.log(textToTranslate);
+          console.log(textToTranslate, 'textToTranslate');
 
           const answer = {
             response:
@@ -86,9 +86,21 @@ export class UserService {
           };
           answer.audio = await generateAudio(answer.response, targetCode);
           return answer;
+        } else {          
+          const answer = {
+            response: body.lang=="en"?'please enter query in correct format':await bhashiniTranslate(
+              lang,
+              body.lang,
+              'please enter query in correct format',
+            ),
+            audio: '',
+            answerId: uuidv4(),
+          };
+          answer.audio = await generateAudio(answer.response, body.lang);
+          return answer;
         }
       } else {
-       this.intentSearch(body)
+        return this.intentSearch(body);
       }
     } catch (error) {
       console.log(error);
@@ -166,16 +178,14 @@ export class UserService {
     });
     miniSearch.addAll(intents);
     let result = miniSearch.search(body.query, { fuzzy: 0.3 })[0];
-    
-    if (result) { 
-      return {   
+
+    if (result.queryTerms.length > 1) {
+      return {
         response: result.answers[body.lang][0].value,
         audio: result.answers[body.lang][0].audio,
         answerId: uuidv4(),
       };
     } else {
-      console.log('in fall');
-      
       return translateReply['fallback'][body.lang];
     }
   }
