@@ -125,6 +125,7 @@ export class UserService {
         '"Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"',
       'sec-ch-ua-mobile': '?0',
       'sec-ch-ua-platform': '"Windows"',
+      'appId': body.userToken,
       ...formData.getHeaders(),
     };
 
@@ -140,11 +141,35 @@ export class UserService {
 
 
   async upload(file,userToken): Promise<any> {
-    try {
-      const payload = { 'appID': userToken, 'urls': [file.fileURL] }
+    try {    
+      const payload = { 'urls': [file.imageUrl] }
       console.log(payload,"payload here");
-      const url = 'http://172.105.39.50:9008/bharatgpt/vertexaitraining';
-      let response = await axios.post(url, payload);
+      let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: 'https://builder.corover.ai/selfonboardAPI/bot/trainBharatVertex',
+        headers: { 
+          'Content-Type': 'application/json', 
+          'Accept-Language': 'en-CA,en;q=0.9,fr-CA;q=0.8,fr;q=0.7,en-US;q=0.6,en-GB;q=0.5', 
+          'Cookie': '_gid=GA1.2.352214555.1721805869; _ga=GA1.1.82458110.1716920555; _ga_7K0RMWL72E=GS1.1.1721805869.9.0.1721805869.0.0.0; FCNEC=%5B%5B%22AKsRol-W-OBcyHnofdZrfxIwafs14saoBrHJ37vBFPx7o47DVa2RdPiyUhKEooYNt3NXJxCZO7Etod_85PMWoZYnXe1FrFf9XRevSKJ8FVFuvqptgv1XJ-N7-CFETAJOjQ-gODkxRBXGxjJN9SGocfGoZpCgV10mMw%3D%3D%22%5D%5D', 
+          'Expires': '0', 
+          'Origin': 'https://builder.corover.ai', 
+          'Pragma': 'no-cache', 
+          'Referer': 'https://builder.corover.ai/', 
+          'Sec-Fetch-Dest': 'empty', 
+          'Sec-Fetch-Mode': 'cors', 
+          'Sec-Fetch-Site': 'same-origin', 
+          'access': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoYXJqaWwgZGhhbmFuaSIsImVtYWlsSWQiOiJzaGFyamlsZGhhbmFuaTQ2QGdtYWlsLmNvbSIsImNvbXBhbnlJZCI6IkNvcm92ZXIiLCJpYXQiOjE3MjE4MDU1OTAsImV4cCI6MTcyMTg5MTk5MH0.4c7n6Ty9_UTgCh0LyaYg9gndtKjC0jQB4424-pxt5mM', 
+          'appId': userToken, 
+          'sec-ch-ua': 'Not/A', 
+          'sec-ch-ua-mobile': '?0', 
+          'sec-ch-ua-platform': 'Windows'
+        },
+        data : payload
+      };
+      
+      let response = await axios.request(config);
+
       if (response.data.message=== 'Training Done') {
         console.log(response.data,"response after training");
         return {appID:userToken,training:true}
